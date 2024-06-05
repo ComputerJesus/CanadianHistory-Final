@@ -1,6 +1,8 @@
+'use client';
+
 import Image from "next/image";
 import Link from 'next/link'
-
+import { ModelViewer } from "./componants/3dviewer";
 
 export default function Home() {
   return (
@@ -15,6 +17,9 @@ export default function Home() {
           <button className=" center rounded-md bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-600 focus:bg-blue-700 active:bg-blue-800 div-center text-center text-2xl fixed bottom-20 left-40 ">Start Simulating</button>
         </Link>
         </div>
+        <ModelViewer />
+
+
 
       </div>
     </main>
