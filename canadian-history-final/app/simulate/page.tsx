@@ -1,9 +1,17 @@
-import Image from "next/image";
+import React from "react";
+
+declare namespace JSX {
+  interface IntrinsicElements {
+    model: React.FC<React.PropsWithChildren>;
+  }
+}
+
+import EarthModel from "../componants/EarthViewer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <p>This is a place Holder!</p>
+    <main>
+      <EarthModel />
     </main>
   );
 }
