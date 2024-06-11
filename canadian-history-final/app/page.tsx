@@ -25,7 +25,7 @@ export default function Home() {
         </motion.div>
         <div>
         <Link href="/simulate">
-          <button className=" rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 active:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 dark:active:bg-blue-800 ">Start Simulating</button>
+          <button className=" rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 active:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 dark:active:bg-blue-800 ">Start the "Escape Room"</button>
         </Link>
         </div>
 

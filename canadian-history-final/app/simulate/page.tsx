@@ -25,7 +25,7 @@ export default function SimulatePage() {
     },
     visible: {
       opacity: 1,
-      y: -500,
+      y: -510,
     },
   };
 
@@ -87,9 +87,9 @@ export default function SimulatePage() {
             transition={{ duration: 0.6 }}
           >
             {/* Submenu items */}
-            <div className="p-2 rounded-md cursor-pointer">Submenu item 1</div>
-            <div className="p-2 rounded-md cursor-pointer">Submenu item 2</div>
-            <div className="p-2 rounded-md cursor-pointer">Submenu item 3</div>
+            <div className="p-2 rounded-md cursor-pointer hover:bg-gray-200">Submenu item 1</div>
+            <div className="p-2 rounded-md cursor-pointer hover:bg-gray-200">Submenu item 2</div>
+            <div className="p-2 rounded-md cursor-pointer hover:bg-gray-200">Submenu item 3</div>
           </motion.div>
         )}
       </AnimatePresence>
