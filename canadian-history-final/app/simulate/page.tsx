@@ -61,7 +61,7 @@ export default function SimulatePage() {
             transition={{ duration: 0.6 }}
           >
             {/* Responses */}
-            {["What if the First nations were diffrent?", "What if the First Settlers were diffrent ?", "What if someone else won the first world war."].map((response, index) => (
+            {["What if the First nations were different?", "What if the First Settlers were different?", "What if someone else won the first world war."].map((response, index) => (
               <div key={index} className="p-2 hover:bg-gray-200 rounded-md cursor-pointer" onClick={() => handleOptionClick(response)}>
                 {response}
               </div>
