@@ -2,6 +2,14 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+/**
+ * SimulatePage component
+ * 
+ * This component renders a simulation page with a dropdown menu and a text box.
+ * The dropdown menu allows the user to select an option, and the selected option is displayed in the text box.
+ * 
+ * @returns {JSX.Element} The rendered SimulatePage component
+ */
 export default function SimulatePage() {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [showResponses, setShowResponses] = useState(false);
@@ -29,12 +37,23 @@ export default function SimulatePage() {
     },
   };
 
+/**
+   * Handles the click event of the dropdown menu option.
+   * 
+   * @param {string} option - The selected option
+   */
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
     setShowResponses(false);
     setShowSubmenu(false);
   };
 
+  
+  /**
+   * Handles the click event of the submenu item.
+   * 
+   * @param {string} option - The selected submenu item
+   */
   const handleMoreClick = () => {
     setShowSubmenu(!showSubmenu);
   };
@@ -62,7 +81,7 @@ export default function SimulatePage() {
           >
             {/* Responses */}
             {["What if the First nations were different?", "What if the First Settlers were different?", "What if someone else won the first world war."].map((response, index) => (
-              <div key={index} className="p-2 hover:bg-gray-200 rounded-md cursor-pointer" onClick={() => handleOptionClick(response)}>
+              <div key={index} className="p-2 hover:bg-gray-200 rounded-md cursor-pointer" onClick={handleMoreClick}>
                 {response}
               </div>
             ))}
@@ -87,9 +106,9 @@ export default function SimulatePage() {
             transition={{ duration: 0.6 }}
           >
             {/* Submenu items */}
-            <div className="p-2 rounded-md cursor-pointer hover:bg-gray-200">Submenu item 1</div>
-            <div className="p-2 rounded-md cursor-pointer hover:bg-gray-200">Submenu item 2</div>
-            <div className="p-2 rounded-md cursor-pointer hover:bg-gray-200">Submenu item 3</div>
+            <div className="p-2 rounded-md cursor-pointer hover:bg-gray-200" onClick={() => handleOptionClick('Hello Boss')}>Submenu item 1</div>
+            <div className="p-2 rounded-md cursor-pointer hover:bg-gray-200" onClick={() => handleOptionClick('Hello Boss')}>Submenu item 2</div>
+            <div className="p-2 rounded-md cursor-pointer hover:bg-gray-200" onClick={() => handleOptionClick('Hello Boss')}>Submenu item 3</div>
           </motion.div>
         )}
       </AnimatePresence>
